@@ -3,6 +3,6 @@
 # а указать явно, в программе.
 from typing import List, Union
 
-spisok = [2021, 'с','новым', 'годом', 20.21, None]
+spisok = [2021, 'с', 'новым', 'годом', 20.21, None]
 for i in spisok:
     print(type(i))
