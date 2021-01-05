@@ -53,11 +53,23 @@ units = []
 
 for i in range(0, len(products)):
     one_product_data = products[i][1]
-    print(one_product_data)
+    #print(one_product_data)
     names.append(one_product_data.get('название'))
     prices.append(one_product_data.get('цена'))
     quantity.append(one_product_data.get('количество'))
     units.append(one_product_data.get('eд'))
 
 products_info = { 'название': names, 'цена': prices, 'количество': quantity, 'eд': units }
+print(products_info)
+
+# версия с перебором по ключу
+products_info = {}
+for i in range(0, len(products)):
+    one_product_data = products[i][1]
+    for key in one_product_data:
+        if key in products_info.keys():
+            if one_product_data[key] not in products_info[key]:
+                products_info[key].append(one_product_data[key])
+        else:
+            products_info.setdefault(key, []).append(one_product_data[key])
 print(products_info)
