@@ -1,20 +1,20 @@
 # 1. Реализовать функцию, принимающую два числа (позиционные аргументы) и выполняющую их деление. Числа запрашивать
 # у пользователя, предусмотреть обработку ситуации деления на ноль.
 
-# def division_func(a, b):
-#     try:
-#         return a / b
-#     except ZeroDivisionError:
-#         print('Деление на ноль')
-#
-# while True:
-#     try:
-#         a = float(input('Введите первое число: '))
-#         b = float(input('Введите второе число: '))
-#         print(round(division_func(a, b), 2))
-#         break
-#     except ValueError:
-#         print('Некорректный ввод')
+def division_func(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        print('Деление на ноль')
+
+while True:
+    try:
+        a = float(input('Введите первое число: '))
+        b = float(input('Введите второе число: '))
+        print(round(division_func(a, b), 2))
+        break
+    except ValueError:
+        print('Некорректный ввод')
 
 # 2. Реализовать функцию, принимающую несколько параметров, описывающих данные пользователя: имя, фамилия, год рождения,
 # город проживания, email, телефон. Функция должна принимать параметры как именованные аргументы. Реализовать вывод
