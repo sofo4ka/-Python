@@ -4,7 +4,9 @@
 def my_func(a, b, c):
     return a + b + c - min(a, b, c)
 
+
 print(my_func(1, 7, 10))
+
 
 # 4. Программа принимает действительное положительное число x и целое отрицательное число y. Необходимо выполнить
 # возведение числа x в степень y. Задание необходимо реализовать в виде функции my_func(x, y). При решении задания
@@ -19,6 +21,7 @@ def my_func1(x, y):
         else:
             print('Некорректный ввод')
 
+
 def my_func2(x, y):
     if complex(x).imag == 0 and x > 0:
         if y == int(y) and y < 0:
@@ -28,7 +31,6 @@ def my_func2(x, y):
             return result
         else:
             print('Некорректный ввод')
-
 
 
 print(my_func1(3, -4))
