@@ -17,7 +17,7 @@ class Position(Worker):
 
     def __init__(self, name, surname, position, income):
         super().__init__(name, surname, position, income)
-        self._income_value = self._income.get('wage') + self._income.get('bonus')
+        self._full_income_value = self._income.get('wage') + self._income.get('bonus')
 
     def get_full_name(self):
         """Метод получения полного имени сотрудника"""
@@ -25,11 +25,11 @@ class Position(Worker):
 
     def get_total_income(self):
         """Метод получения дохода с учетом премии"""
-        return f'Доход с учетом премии: {self._income_value} руб.'
+        return f'Доход с учетом премии: {self._full_income_value} руб.'
 
 
-income_ivanov = {'wage': 100000, 'bonus': 20000}
-p = Position(name='Иван', surname='Иванов', position='пилот', income=income_ivanov)
-print(p.get_full_name())
-print(p.get_total_income())
-
+if __name__ == '__main__':
+    income_ivanov = {'wage': 100000, 'bonus': 20000}
+    p = Position(name='Иван', surname='Иванов', position='пилот', income=income_ivanov)
+    print(p.get_full_name())
+    print(p.get_total_income())

@@ -15,7 +15,7 @@ class Car:
         self.is_police = is_police
 
     def show_speed(self):
-        return f'Текущая скорость автомобиля: {self.speed}'
+        print(f'Текущая скорость автомобиля: {self.speed}')
 
     def go(self):
         print('машина поехала')
@@ -33,10 +33,10 @@ class TownCar(Car):
 
     def show_speed(self):
         if self.speed <= 60:
-            return f'Текущая скорость автомобиля: {self.speed}'
+            print(f'Текущая скорость автомобиля: {self.speed}')
         else:
-            return f'Превышение установленной скорости движения транспортного средства, равной 60 км/ч!!!' \
-                   f'Текущая скорость автомобиля: {self.speed}'
+            print(f'Превышение установленной скорости движения транспортного средства, равной 60 км/ч!!!' \
+                  f'Текущая скорость автомобиля: {self.speed}')
 
 
 class SportCar(Car):
@@ -50,10 +50,10 @@ class WorkCar(Car):
 
     def show_speed(self):
         if self.speed <= 40:
-            return f'Текущая скорость автомобиля: {self.speed}'
+            print(f'Текущая скорость автомобиля: {self.speed}')
         else:
-            return f'Превышение установленной скорости движения транспортного средства, равной 40 км/ч!!!' \
-                   f'Текущая скорость автомобиля: {self.speed}'
+            print(f'Превышение установленной скорости движения транспортного средства, равной 40 км/ч!!!' \
+                  f'Текущая скорость автомобиля: {self.speed}')
 
 
 class PoliceCar(Car):
@@ -66,15 +66,13 @@ s = SportCar(speed=180, color='red', name='Ferrari 488', is_police=False)
 w = WorkCar(speed=50, color='black', name='ВАЗ-2109', is_police=False)
 p = PoliceCar(speed=80, color='white', name='UAZ Patriot', is_police=True)
 
-print(t.speed)
-print(t.show_speed())
+print(t.__dict__)
+print(s.__dict__)
+print(w.__dict__)
+print(p.__dict__)
 
-print(s.color)
+t.show_speed()
 s.go()
-
-print(w.name)
-print(w.show_speed())
-
-print(p.is_police)
+w.show_speed()
 p.turn_direction()
 p.stop()

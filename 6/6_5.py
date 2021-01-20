@@ -37,9 +37,9 @@ class Handle(Stationery):
 
 
 pen = Pen('black')
-pensill = Pensil('blue')
+pensil = Pensil('blue')
 handle = Handle('red')
 
 pen.draw()
-pensill.draw()
+pensil.draw()
 handle.draw()

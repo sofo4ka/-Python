@@ -6,6 +6,9 @@
 # Например: 20м * 5000м * 25кг * 5см = 12500 т
 
 class Road:
+    _mass_for_one_m2 = 25
+    _thickness = 5
+
     def __init__(self, length, width):
         self._length = length
         self._width = width
@@ -13,9 +16,10 @@ class Road:
     def mass_calculation(self):
         """Расчет массы асфальта, необходимого для покрытия всего дорожного полотна. Формула:
         длина * ширина * (масса асфальта для покрытия 1 м2 дороги асфальтом, толщиной в 1 см) * толщина в см"""
-        print('Масса асфальта в тоннах: ')
-        return self._length * self._width * 25 * 5 / 1000
+        full_mass = self._length * self._width * self._mass_for_one_m2 * self._thickness
+        return f'Масса асфальта в тоннах: {full_mass/1000}'
 
 
-r = Road(length=5000, width=20)
-print(r.mass_calculation())
+if __name__ == '__main__':
+    r = Road(length=5000, width=20)
+    print(r.mass_calculation())
