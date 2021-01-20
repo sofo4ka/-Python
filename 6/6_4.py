@@ -61,18 +61,23 @@ class PoliceCar(Car):
         super().__init__(name, speed, color, is_police)
 
 
-t = TownCar(speed=48, color='green', name='УАЗ-3303', is_police=False)
-s = SportCar(speed=180, color='red', name='Ferrari 488', is_police=False)
-w = WorkCar(speed=50, color='black', name='ВАЗ-2109', is_police=False)
-p = PoliceCar(speed=80, color='white', name='UAZ Patriot', is_police=True)
 
-print(t.__dict__)
-print(s.__dict__)
-print(w.__dict__)
-print(p.__dict__)
 
-t.show_speed()
-s.go()
-w.show_speed()
-p.turn_direction()
-p.stop()
+
+
+if __name__ == '__main__':
+    t = TownCar(speed=48, color='green', name='УАЗ-3303', is_police=False)
+    s = SportCar(speed=180, color='red', name='Ferrari 488', is_police=False)
+    w = WorkCar(speed=50, color='black', name='ВАЗ-2109', is_police=False)
+    p = PoliceCar(speed=80, color='white', name='UAZ Patriot', is_police=True)
+
+    print(t.__dict__)
+    print(s.__dict__)
+    print(w.__dict__)
+    print(p.__dict__)
+
+    t.show_speed()
+    s.go()
+    w.show_speed()
+    p.turn_direction()
+    p.stop()

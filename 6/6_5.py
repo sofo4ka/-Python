@@ -36,10 +36,11 @@ class Handle(Stationery):
         print('Запуск отрисовки маркером.')
 
 
-pen = Pen('black')
-pensil = Pensil('blue')
-handle = Handle('red')
+if __name__ == '__main__':
+    pen = Pen('black')
+    pensil = Pensil('blue')
+    handle = Handle('red')
 
-pen.draw()
-pensil.draw()
-handle.draw()
+    pen.draw()
+    pensil.draw()
+    handle.draw()
