@@ -61,10 +61,6 @@ class PoliceCar(Car):
         super().__init__(name, speed, color, is_police)
 
 
-
-
-
-
 if __name__ == '__main__':
     t = TownCar(speed=48, color='green', name='УАЗ-3303', is_police=False)
     s = SportCar(speed=180, color='red', name='Ferrari 488', is_police=False)
