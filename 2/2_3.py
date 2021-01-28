@@ -23,3 +23,38 @@ for j in year_list:
 for i in year_dict.keys():
     if month in year_dict[i]:
         print(i)
+
+#Более дешевый вариант by luchanos:
+seasons_dict = {
+        1: "winter",
+        2: "winter",
+        3: "spring",
+        4: "spring",
+        5: "spring",
+        6: "summer",
+        7: "summer",
+        8: "summer",
+        9: "autumn",
+        10: "autumn",
+        11: "autumn",
+        12: "winter"}
+
+seasons_list = ["winter",
+                "winter",
+                "spring",
+                "spring",
+                "spring",
+                "summer",
+                "summer",
+                "summer",
+                "autumn",
+                "autumn",
+                "autumn",
+                "winter"]
+
+try:
+    month1 = int(input("Enter the month: "))
+    print(f"FROM DICT: Month {month1} is {seasons_dict[month1]} month")
+    print(f"FROM LIST: Month {month1} is {seasons_list[month1 - 1]} month")
+except ValueError as err:
+    print("Wrong value has been entered!", err)
