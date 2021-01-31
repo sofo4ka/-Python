@@ -9,7 +9,7 @@ def get_numbers():
                 element = float(element)
             return input_data
         except Exception as err:
-            print("Ошибка ввода")
+            print("Ошибка ввода", err)
 
 
 with open("testfile5.txt", "w", encoding="utf-8") as file_object:

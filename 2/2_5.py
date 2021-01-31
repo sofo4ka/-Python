@@ -24,3 +24,16 @@ else:
             set_of_integer_numbers.insert(set_of_integer_numbers.index(element), users_input_number)
             break
 print(set_of_integer_numbers)
+
+#Более дешевый вариант by luchanos:
+my_list = [9, 8, 7, 7, 6, 5, 3, 1]
+new_number = int(input("Enter the new element: "))
+i = 0
+for n in my_list:
+    if new_number <= n:
+        i += 1
+my_list.insert(i, new_number)
+print(my_list)
+
+my_list.index(7)
+my_list.count(7)

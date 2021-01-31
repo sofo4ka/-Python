@@ -19,3 +19,12 @@ with open("testfile4.txt", "r", encoding="utf-8") as file_object:
 file_object_1 = open("testfile4_2.txt", "w", encoding="utf-8")
 file_object_1.writelines(full_data_to_write)
 file_object_1.close()
+
+
+#вариант by luchanos без конкатенации:
+with open("task_4_1.txt", "r", encoding="utf-8") as f_o:
+    with open("task_4_2.txt", "w", encoding="utf-8") as final_file:
+        lines = f_o.readlines()
+        for line in lines:
+            num_list = line.split(" — ")
+            final_file.write(f"{num_dict[num_list[0]]} - {num_list[1]}")
